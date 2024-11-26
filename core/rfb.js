@@ -242,16 +242,16 @@ export default class RFB extends EventTargetMixin {
         this._cursorImage = RFB.cursors.none;
 
         // populate decoder array with objects
-        this._decoders[encodings.encodingRaw] = new RawDecoder();
-        this._decoders[encodings.encodingCopyRect] = new CopyRectDecoder();
-        this._decoders[encodings.encodingRRE] = new RREDecoder();
-        this._decoders[encodings.encodingHextile] = new HextileDecoder();
-        this._decoders[encodings.encodingZlib] = new ZlibDecoder();
-        this._decoders[encodings.encodingTight] = new TightDecoder();
+      //  this._decoders[encodings.encodingRaw] = new RawDecoder();
+      //  this._decoders[encodings.encodingCopyRect] = new CopyRectDecoder();
+      //  this._decoders[encodings.encodingRRE] = new RREDecoder();
+      //  this._decoders[encodings.encodingHextile] = new HextileDecoder();
+      //  this._decoders[encodings.encodingZlib] = new ZlibDecoder();
+      //  this._decoders[encodings.encodingTight] = new TightDecoder();
         this._decoders[encodings.encodingTightPNG] = new TightPNGDecoder();
-        this._decoders[encodings.encodingZRLE] = new ZRLEDecoder();
-        this._decoders[encodings.encodingJPEG] = new JPEGDecoder();
-        this._decoders[encodings.encodingH264] = new H264Decoder();
+      //  this._decoders[encodings.encodingZRLE] = new ZRLEDecoder();
+      //  this._decoders[encodings.encodingJPEG] = new JPEGDecoder();
+      //  this._decoders[encodings.encodingH264] = new H264Decoder();
 
         // NB: nothing that needs explicit teardown should be done
         // before this point, since this can throw an exception
