@@ -252,6 +252,11 @@ export default class RFB extends EventTargetMixin {
       //  this._decoders[encodings.encodingZRLE] = new ZRLEDecoder();
       //  this._decoders[encodings.encodingJPEG] = new JPEGDecoder();
       //  this._decoders[encodings.encodingH264] = new H264Decoder();
+        // populate decoder array with objects
+        this._decoders[encodings.encodingRaw] = new RawDecoder();
+        this._decoders[encodings.encodingCopyRect] = new CopyRectDecoder();
+        this._decoders[encodings.encodingHextile] = new HextileDecoder();
+        this._decoders[encodings.encodingZRLE] = new ZRLEDecoder();
 
         // NB: nothing that needs explicit teardown should be done
         // before this point, since this can throw an exception
